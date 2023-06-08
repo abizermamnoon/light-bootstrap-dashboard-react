@@ -15,42 +15,39 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React, { Component } from "react";
+import React, { useState } from "react";
 import { useLocation, NavLink } from "react-router-dom";
 
 import { Nav } from "react-bootstrap";
 
-import logo from "assets/img/reactlogo.png";
+import "views/HomePage.css"
+import Dashboard from "views/Dashboard.js";
+import TableList from "views/TableList.js";
 
 function Sidebar({ color, image, routes }) {
   const location = useLocation();
   const activeRoute = (routeName) => {
     return location.pathname.indexOf(routeName) > -1 ? "active" : "";
   };
+
   return (
-    <div className="sidebar" data-image={image} data-color={color}>
+    <div>
       <div
-        className="sidebar-background"
-        style={{
-          backgroundImage: "url(" + image + ")"
-        }}
+        
       />
-      <div className="sidebar-wrapper">
+      <div className='sidebar-wrapper'>
         <div className="logo d-flex align-items-center justify-content-start">
-          <a
-            href="https://www.creative-tim.com?ref=lbd-sidebar"
-            className="simple-text logo-mini mx-1"
+          <a className="simple-text logo-mini mx-1"
           >
             <div className="logo-img">
-              <img src={require("assets/img/reactlogo.png")} alt="..." />
+              <img src={require("assets/img/reactlogo.png")} alt="EY Apache E-Charts" />
             </div>
           </a>
-          <a className="simple-text" href="http://www.creative-tim.com">
-            Creative Tim
+          <a className="simple-text">
           </a>
         </div>
         <Nav>
-          {routes.map((prop, key) => {
+        {routes.map((prop, key) => {
             if (!prop.redirect)
               return (
                 <li

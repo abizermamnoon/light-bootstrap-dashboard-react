@@ -54,6 +54,7 @@ function Header() {
     <Navbar
       bg={lightMode ? "light" : "dark"}
       expand="lg"
+      
     >
       <Container fluid>
         <div className="d-flex justify-content-center align-items-center ml-2 ml-lg-0">

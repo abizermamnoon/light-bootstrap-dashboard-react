@@ -32,9 +32,7 @@ function Sidebar({ color, image, routes }) {
 
   return (
     <div>
-      <div
-        
-      />
+      
       <div className='sidebar-wrapper'>
         <div className="logo d-flex align-items-center justify-content-start">
           <a className="simple-text logo-mini mx-1"

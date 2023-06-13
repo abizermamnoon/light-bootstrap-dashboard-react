@@ -87,7 +87,7 @@ function Admin() {
       <div className={`sidebar ${collapsed ? "collapsed" : ""}`} data-image={image} data-color={color}>
         <Sidebar color={color} image={hasImage ? image : ""} routes={routes} />
       </div>
-        <div className={`main-panel ${lightMode ? 'light-mode' : 'dark-mode'}`} ref={mainPanel}> 
+        <div className={`main-panel ${lightMode ? 'light-mode' : 'dark-mode'}`} ref={mainPanel} style={{ width: '95%', marginLeft: '5%' }}> 
           <AdminNavbar lightMode={lightMode}/>
           <div className="content">
             <Switch>{getRoutes(routes)}</Switch>
